@@ -13,12 +13,14 @@ print(b, colors)
 a = [[1, 2], [2, 4]]
 b = a[:] # shallow copy
 
-b[0].append([3, 6])
+b.append([3, 6])
 
-print(a)
-print(b)
+print(a) # 영향 없음
+print(b) # 영향 있음
 
-b[0].append(7)
+c = a[:]
 
-print(a)
-print(b)
+c[0].append(7)
+
+print(a) # 영향 있음 (???)
+print(c) # 영향 있음
