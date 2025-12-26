@@ -10,17 +10,33 @@ b = colors
 b.append("white")
 print(b, colors)
 
+
+# Shallow Copy
+# A Shallow copy constructs a new compound object and then (to the extent possible) inserts references...
+# ...into it to the object found in the original.
 a = [[1, 2], [2, 4]]
 b = a[:] # shallow copy
 
-b.append([3, 6])
+b[0].append([3, 6])
 
-print(a) # 영향 없음
-print(b) # 영향 있음
+print(a)
+print(b)
 
-c = a[:]
+b[0].append(7)
 
-c[0].append(7)
+print(a)
+print(b)
 
-print(a) # 영향 있음 (???)
-print(c) # 영향 있음
+
+# Deep Copy
+# A deep copy construts a new compound object and then, recursively, inserts copy...
+# ...into it of the object found in the original.
+import copy
+
+a = [[1, 2], [2, 4]]
+b = copy.deepcopy(a) # deep copy
+
+b[0].append(3)
+
+print(a)
+print(b)
