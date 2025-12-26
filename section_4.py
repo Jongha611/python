@@ -135,7 +135,9 @@ print_korean_restaurant_url()
 
 # Frequent error from novice
 import math
+import numpy as np
 
+# not good
 number = [34 ,25, 56, 76, 31, 26]
 minimum = math.inf
 
@@ -143,3 +145,8 @@ for n in number:
     if n < minimum:
         minimum = n
 print(minimum)
+
+# better solution
+minimum = min(number)
+maximum = max(number)
+
