@@ -150,3 +150,12 @@ print(minimum)
 minimum = min(number)
 maximum = max(number)
 
+
+# not good
+total = 0
+num_list = [1, 2, 3, 4, 5]
+
+for i in num_list:
+    total += i
+avg = total / len(num_list)
+print(avg)
