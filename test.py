@@ -38,3 +38,4 @@ calculator = CalculationFactory(5)
 calculator.add(2)
 
 print(c)
+print(c)
