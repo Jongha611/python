@@ -58,10 +58,3 @@ calculation_tools = {
     "-": subtract,
     "/": divide
 }
-
-
-def cal_factory(a, b, func):
-    what_cal = input("연산기호를 입력하세요(+, -, *, /): ")
-    a = int(input("a 입력: "))
-    b = int(input("b 입력: "))
-    if what_cal 
