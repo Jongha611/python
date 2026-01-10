@@ -5,7 +5,8 @@ class Car:
      # ...넣는다는것을 의미한다.
     def __init__(self, body_type):
         self.body_type = body_type
-
+        
+    # __repr__()은 단순한 함수설명 메서드함수가 아니다.
     def __repr__(self):
         return f'Car({self.body_type} body type)'
 
@@ -25,11 +26,11 @@ class Car:
         return cls("convertible")
     
 
-# c = Car(body_type="sport")
-# c.set_body_type("sedan")
-# print(c.body_type)
+c = Car(body_type="sport")
+c.set_body_type("sedan")
+print(c.body_type)
 # print(Car.hyundai())
-print(Car.ferrari())
+# print(Car.ferrari())
 
 
 # class methods take a cls parameter that points to the class—and not the object...
